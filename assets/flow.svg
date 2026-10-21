@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 280" width="1100" height="280" role="img" aria-label="Audio and a prompt go into one request and come back as text">
+  <rect width="1100" height="280" fill="#071007"/>
+  <g font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" fill="#f4f7ef">
+    <rect x="24" y="36" width="250" height="208" rx="16" fill="#141a14" stroke="#76b900" stroke-width="2"/>
+    <text x="44" y="78" font-size="15" fill="#76b900" letter-spacing="1.5">INPUT</text>
+    <text x="44" y="118" font-size="26" font-weight="650">Recording</text>
+    <text x="44" y="154" font-size="18" fill="#c5d0bc">up to 60 minutes</text>
+    <text x="44" y="196" font-size="26" font-weight="650">Prompt</text>
+    <text x="44" y="228" font-size="18" fill="#c5d0bc">names, terms, question</text>
+
+    <text x="300" y="150" font-size="36" fill="#76b900">→</text>
+
+    <rect x="350" y="70" width="280" height="140" rx="16" fill="#76b900"/>
+    <text x="374" y="124" font-size="15" fill="#071007" letter-spacing="1.5">ONE REQUEST</text>
+    <text x="374" y="164" font-size="28" font-weight="700" fill="#071007">64K token budget</text>
+    <text x="374" y="192" font-size="16" fill="#071007">audio + prompt + answer</text>
+
+    <text x="656" y="150" font-size="36" fill="#76b900">→</text>
+
+    <rect x="706" y="28" width="370" height="224" rx="16" fill="#141a14" stroke="#2a3a22"/>
+    <text x="730" y="68" font-size="15" fill="#76b900" letter-spacing="1.5">OUTPUT</text>
+    <text x="730" y="108" font-size="22">Transcript</text>
+    <text x="730" y="142" font-size="22">Translation</text>
+    <text x="730" y="176" font-size="22">Speaker labels</text>
+    <text x="730" y="210" font-size="22">An answer about the audio</text>
+  </g>
+</svg>

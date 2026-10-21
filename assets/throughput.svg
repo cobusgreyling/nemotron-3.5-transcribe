@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 560" width="1100" height="560" role="img" aria-label="Briefing throughput from Jetson AGX Thor to B200">
+  <rect width="1100" height="560" fill="#071007"/>
+  <g font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+    <text x="32" y="46" fill="#f4f7ef" font-size="24" font-weight="650">Real-time factor, from the early-access briefing</text>
+    <text x="32" y="76" fill="#a7b3a4" font-size="16">100x means one second of GPU work clears about 100 seconds of audio. Not measured on this Mac.</text>
+    <g font-size="16" fill="#e7eee2">
+      <text x="32" y="132">Jetson AGX Thor</text>
+      <rect x="230" y="114" width="17" height="24" fill="#76b900"/>
+      <text x="770" y="132" fill="#76b900">106x · 57 min</text>
+
+      <text x="32" y="180">RTX Spark (N1X)</text>
+      <rect x="230" y="162" width="45" height="24" fill="#76b900"/>
+      <text x="770" y="180" fill="#76b900">274x · 22 min</text>
+
+      <text x="32" y="228">DGX Spark</text>
+      <rect x="230" y="210" width="60" height="24" fill="#76b900"/>
+      <text x="770" y="228" fill="#76b900">370x · 16 min</text>
+
+      <text x="32" y="276">RTX 5090</text>
+      <rect x="230" y="258" width="96" height="24" fill="#76b900"/>
+      <text x="770" y="276" fill="#76b900">587x · 10 min</text>
+
+      <text x="32" y="324">H100 / H200</text>
+      <rect x="230" y="306" width="219" height="24" fill="#76b900"/>
+      <text x="770" y="324" fill="#76b900">1,340x · 4.5 min</text>
+
+      <text x="32" y="372">RTX PRO 6000</text>
+      <rect x="230" y="354" width="379" height="24" fill="#76b900"/>
+      <text x="770" y="372" fill="#76b900">2,325x · 2.6 min</text>
+
+      <text x="32" y="420">B200 / GB200</text>
+      <rect x="230" y="402" width="500" height="24" fill="#9be02a"/>
+      <text x="770" y="420" fill="#9be02a">3,064x · 2 min</text>
+    </g>
+    <text x="32" y="478" fill="#a7b3a4" font-size="15">Time is how long 100 hours of audio takes.</text>
+    <text x="32" y="504" fill="#a7b3a4" font-size="15">Thor and the Spark boards use NeMo-Speech.cpp. DGX Spark can also use a NIM. From the RTX 5090 up, the briefing uses a NIM.</text>
+  </g>
+</svg>

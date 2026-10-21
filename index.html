@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nemotron 3.5 Transcribe — Showcase</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="#top">Nemotron 3.5 <span>Transcribe</span></a>
+    <div class="nav-links">
+      <a href="#console">Console</a>
+      <a href="#path">Request</a>
+      <a href="#speed">Speed</a>
+      <a href="#languages">Languages</a>
+      <a href="BLOG.md">Blog</a>
+    </div>
+  </nav>
+
+  <main class="wrap" id="top">
+    <header class="hero">
+      <p class="eyebrow">NVIDIA early access · recorded speech</p>
+      <h1>One recording. A transcript you can use.</h1>
+      <p class="sub">I am on the NGC team for Nemotron 3.5 Transcribe. The checkpoint email has not arrived, and this Mac has no NVIDIA GPU, so this page walks the model in order. Press play. The clip is local. The labels show the shape of a result.</p>
+      <p class="embargo">Embargoed until 28 October 2026, 8:00 am PT. Private repository. Weights are not in git.</p>
+      <img class="banner" src="assets/header.jpg" alt="NVIDIA Nemotron 3.5 Transcribe. One recording. A transcript you can use." />
+    </header>
+
+    <section class="stats" aria-label="Model snapshot">
+      <div class="stat"><b>~30B</b><span>parameters, ~4B active</span></div>
+      <div class="stat"><b>40</b><span>languages, mid-sentence switch</span></div>
+      <div class="stat"><b>60 min</b><span>of audio in one pass</span></div>
+      <div class="stat"><b>8</b><span>speakers, in 13 languages</span></div>
+      <div class="stat"><b>64K</b><span>tokens for audio, prompt, answer</span></div>
+    </section>
+
+    <section class="panel" id="console">
+      <h2>The console</h2>
+      <p class="sub">Same clip. A different instruction changes the tab. Phrase times on this page are marked by hand, so the playhead has something honest to follow. The model will emit its own.</p>
+      <div class="controls">
+        <button class="btn primary" id="play" type="button">Play clip</button>
+        <span class="hint" id="clock">0.00s</span>
+      </div>
+      <div class="wave-wrap">
+        <canvas id="wave" width="1040" height="120"></canvas>
+        <div class="playhead" id="playhead"></div>
+      </div>
+      <div class="tabs" role="tablist">
+        <button class="tab" type="button" data-tab="signal" aria-selected="true">Signal</button>
+        <button class="tab" type="button" data-tab="words">Words</button>
+        <button class="tab" type="button" data-tab="languages">Languages</button>
+        <button class="tab" type="button" data-tab="speakers">Speakers</button>
+        <button class="tab" type="button" data-tab="timing">Timing</button>
+        <button class="tab" type="button" data-tab="json">JSON</button>
+        <button class="tab" type="button" data-tab="events">Events</button>
+      </div>
+      <div class="prompt" id="prompt"></div>
+      <div class="out" id="out"></div>
+      <p class="note">Demo mode. Three Mac voices, mixed into one file. Not a Nemotron inference.</p>
+      <audio id="player" src="assets/demo.wav" preload="auto"></audio>
+    </section>
+
+    <section class="panel" id="path">
+      <h2>One request does the whole job</h2>
+      <p class="sub">Audio, the prompt, and the answer share one 64,000-token budget. A long file plus a long prompt leaves less room for the answer.</p>
+      <img src="assets/flow.svg" alt="A recording and a prompt enter one 64K request and return a transcript, a translation, speaker labels, or an answer." />
+    </section>
+
+    <section class="grid-2">
+      <div class="panel">
+        <h2>Do not mix it up with ASR</h2>
+        <p>Nemotron 3.5 ASR is the 600-million-parameter streaming model. It listens to live audio.</p>
+        <p>Nemotron 3.5 Transcribe is the recording model. About 30 billion parameters, about 4 billion active. You hand it a file you already have, up to 60 minutes, and you tell it what to do with the words.</p>
+      </div>
+      <div class="panel">
+        <h2>What to ask for</h2>
+        <ol>
+          <li>Write down what was said.</li>
+          <li>Translate, to English or from English, in 31 languages.</li>
+          <li>Label who spoke, up to 8 people, in 13 languages.</li>
+          <li>Pass names and terms so the spelling follows your list.</li>
+          <li>Ask a question about the recording.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="panel" id="speed">
+      <h2>Where it runs</h2>
+      <p class="sub">Self-hosted, from the edge to the data centre. These figures are NVIDIA’s early-access briefing.</p>
+      <img src="assets/throughput.svg" alt="Throughput chart. Jetson AGX Thor at 106x through B200 at 3,064x." />
+    </section>
+
+    <section class="panel" id="languages">
+      <h2>Forty languages</h2>
+      <p class="sub">Every chip transcribes, and the model can switch language mid-sentence. A bright chip is marked for translation on the briefing. English is the pivot, so the other 31 translate to and from English. A green border labels speakers.</p>
+      <div class="langs" id="langs"></div>
+    </section>
+
+    <section class="panel">
+      <h2>When the checkpoint email arrives</h2>
+      <ol>
+        <li>The NGC mail will say how to download the weights. They do not live in this repo.</li>
+        <li>Test a real language switch, in any of the 40 languages.</li>
+        <li>Test a domain word twice: once with your term list, once without.</li>
+        <li>Test speaker labels on a multi-speaker clip, in one of the 13 languages.</li>
+        <li>Measure throughput and write the full test setup down.</li>
+      </ol>
+      <p class="note">Support: NemotronSpeechReviewerSupport@nvidia.com</p>
+    </section>
+
+    <footer>
+      Lab code in this repository is Apache-2.0. The NVIDIA model is early access and is not included. Private until 28 October 2026, 8:00 am Pacific.
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
