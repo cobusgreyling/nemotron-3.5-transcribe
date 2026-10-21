@@ -4,11 +4,9 @@
 
 # Nemotron 3.5 Transcribe — Showcase
 
-I am on the NGC early-access team for **NVIDIA Nemotron 3.5 Transcribe**. The checkpoint email has not arrived. This Mac has no NVIDIA GPU. This repo is the walkthrough: what the model is, what one request returns, and a local console that shows the shape of a result.
+This Mac has no NVIDIA GPU. This repo is the walkthrough: what the model is, what one request returns, and a local console that shows the shape of a result. The weights are **not** in git.
 
 **Read the post → [`BLOG.md`](BLOG.md)**
-
-> **Embargo:** private until **28 October 2026, 8:00 am PT**. Do not flip public. See [`EMBARGO.md`](EMBARGO.md). The weights are **not** in git.
 
 ## 30-second start
 
@@ -36,11 +34,10 @@ No CUDA. You get an 11-second clip and seven tabs: signal, words, languages, spe
 
 Nemotron 3.5 ASR is a different model. That one is the 600M streaming recogniser. This one is for a file you already have.
 
-## When the NGC email arrives
+## When you have the weights
 
-1. Follow the mail for the download. Do not commit the weights here.
+1. Keep the checkpoint out of git.
 2. Test a language switch, a term list, speaker labels, and throughput.
-3. Support: NemotronSpeechReviewerSupport@nvidia.com
 
 ## Layout
 
@@ -56,4 +53,4 @@ BLOG.md             the post
 
 ## Licence
 
-Lab code: Apache-2.0. The NVIDIA model is early access and is not included.
+Lab code: Apache-2.0. The NVIDIA weights are not included.

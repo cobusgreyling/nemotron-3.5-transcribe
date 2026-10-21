@@ -20,10 +20,9 @@
 
   <main class="wrap" id="top">
     <header class="hero">
-      <p class="eyebrow">NVIDIA early access · recorded speech</p>
+      <p class="eyebrow">NVIDIA · recorded speech</p>
       <h1>One recording. A transcript you can use.</h1>
-      <p class="sub">I am on the NGC team for Nemotron 3.5 Transcribe. The checkpoint email has not arrived, and this Mac has no NVIDIA GPU, so this page walks the model in order. Press play. The clip is local. The labels show the shape of a result.</p>
-      <p class="embargo">Embargoed until 28 October 2026, 8:00 am PT. Private repository. Weights are not in git.</p>
+      <p class="sub">This Mac has no NVIDIA GPU, so this page walks the model in order. Press play. The clip is local. The labels show the shape of a result. The weights are not in this repo.</p>
       <img class="banner" src="assets/header.jpg" alt="NVIDIA Nemotron 3.5 Transcribe. One recording. A transcript you can use." />
     </header>
 
@@ -87,30 +86,29 @@
 
     <section class="panel" id="speed">
       <h2>Where it runs</h2>
-      <p class="sub">Self-hosted, from the edge to the data centre. These figures are NVIDIA’s early-access briefing.</p>
+      <p class="sub">Self-hosted, from the edge to the data centre. These figures are NVIDIA’s.</p>
       <img src="assets/throughput.svg" alt="Throughput chart. Jetson AGX Thor at 106x through B200 at 3,064x." />
     </section>
 
     <section class="panel" id="languages">
       <h2>Forty languages</h2>
-      <p class="sub">Every chip transcribes, and the model can switch language mid-sentence. A bright chip is marked for translation on the briefing. English is the pivot, so the other 31 translate to and from English. A green border labels speakers.</p>
+      <p class="sub">Every chip transcribes, and the model can switch language mid-sentence. A bright chip also translates to and from English. English is the pivot, so the other 31 are the translate set. A green border labels speakers.</p>
       <div class="langs" id="langs"></div>
     </section>
 
     <section class="panel">
-      <h2>When the checkpoint email arrives</h2>
+      <h2>When you have the weights</h2>
       <ol>
-        <li>The NGC mail will say how to download the weights. They do not live in this repo.</li>
+        <li>Keep the checkpoint out of this repo.</li>
         <li>Test a real language switch, in any of the 40 languages.</li>
         <li>Test a domain word twice: once with your term list, once without.</li>
         <li>Test speaker labels on a multi-speaker clip, in one of the 13 languages.</li>
         <li>Measure throughput and write the full test setup down.</li>
       </ol>
-      <p class="note">Support: NemotronSpeechReviewerSupport@nvidia.com</p>
     </section>
 
     <footer>
-      Lab code in this repository is Apache-2.0. The NVIDIA model is early access and is not included. Private until 28 October 2026, 8:00 am Pacific.
+      Lab code in this repository is Apache-2.0. The NVIDIA weights are not included.
     </footer>
   </main>
   <script src="app.js"></script>

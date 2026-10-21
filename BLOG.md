@@ -1,13 +1,10 @@
-# I have the team. The weights email has not arrived.
+# One recording. A transcript you can use.
 
-**4 min read** · NVIDIA Nemotron 3.5 Transcribe · early access
-**Embargo:** private until 28 October 2026, 8:00 am PT.
+**4 min read** · NVIDIA Nemotron 3.5 Transcribe
 
 ---
 
-NVIDIA put me on the NGC team `transcribe-3_5-ea`, in org `0767305323357365`. The team description is "Nemotron 3.5 Transcribe EA sharing". My role there is registry read.
-
-The briefing is clear about the next step. The checkpoint does not sit in this repository. An email from NVIDIA NGC will carry the download instructions. Until that email arrives, this page is the walkthrough, not the weights.
+This page walks the model in order. The weights are not in the repository. This Mac has no NVIDIA GPU, so the console plays a local clip and shows the shape of a result.
 
 ## What the model is
 
@@ -33,11 +30,11 @@ The same model, the same audio, a different instruction:
 
 All of that is self-hosted. Your GPUs, from a local machine up to the data centre.
 
-## How fast the briefing says it is
+## How fast it is
 
-RTFx means real-time factor. A figure of 100x means one second of GPU work clears about 100 seconds of audio. These numbers are NVIDIA's early-access briefing. This Mac has no NVIDIA GPU, so I have not measured them.
+RTFx means real-time factor. A figure of 100x means one second of GPU work clears about 100 seconds of audio. These numbers are NVIDIA's figures. This Mac has no NVIDIA GPU, so I have not measured them.
 
-| Machine | RTFx | 100 hours of audio | How the briefing says to run it |
+| Machine | RTFx | 100 hours of audio | How to run it |
 | --- | ---: | --- | --- |
 | Jetson AGX Thor | 106x | 57 min | NeMo-Speech.cpp, JetPack |
 | RTX Spark (N1X) | 274x | 22 min | NeMo-Speech.cpp, Windows 11 ARM64 |
@@ -47,9 +44,9 @@ RTFx means real-time factor. A figure of 100x means one second of GPU work clear
 | RTX PRO 6000 Blackwell | 2,325x | 2.6 min | NIM |
 | B200 / GB200 | 3,064x | 2 min | NIM |
 
-## What I will test when the checkpoint arrives
+## What to test
 
-NVIDIA asked for four checks.
+Four checks are worth running once the weights are on a GPU.
 
 1. A real language switch, in any of the 40 languages.
 2. A domain word, once with the term list and once without it.
@@ -58,14 +55,10 @@ NVIDIA asked for four checks.
 
 The data recipe behind the model is called Granary-v2. It is an open labelling pipeline, with open labels across 48 languages, so a later fine-tune has something to train on: transcripts, translations, domain terms, long recordings, and language labels.
 
-Support is NemotronSpeechReviewerSupport@nvidia.com.
-
 ## This page
 
 The showcase plays an 11-second clip I made on the Mac: an agent, a customer, and a supervisor. The tabs are the jobs one request can do. Words, speakers, timing, a language line, the JSON a caller would parse, and the speaker changes.
 
 The phrase times are marked by hand, so the playhead has something honest to follow. They are not model output. The 30-billion-parameter weights are not on this machine, and they are not in git.
-
-The repository stays private until 28 October 2026, 8:00 am Pacific.
 
 https://github.com/cobusgreyling/nemotron-3.5-transcribe

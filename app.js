@@ -113,7 +113,7 @@ function render() {
       }).join("");
       const role = PHRASES.find((p) => p.speaker === n).role;
       return `<div class="lane"><span class="who-${n}">${role}</span><div class="track">${bits}</div></div>`;
-    }).join("") + `<p class="note">The briefing allows 8 speakers. This clip has 3.</p>`;
+    }).join("") + `<p class="note">Up to 8 speakers. This clip has 3.</p>`;
   } else if (tab === "json") {
     out.innerHTML = `<pre>${JSON.stringify(payload(), null, 2)}</pre>`;
   } else {
