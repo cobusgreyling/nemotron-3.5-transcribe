@@ -19,6 +19,10 @@ cd nemotron-3.5-transcribe
 
 No CUDA. You get an 11-second clip and seven tabs: signal, words, languages, speakers, timing, JSON, events.
 
+## Notebook
+
+[`notebooks/nemotron_3_5_transcribe.ipynb`](notebooks/nemotron_3_5_transcribe.ipynb) runs that same clip through the seven prompts, the language table, and the JSON shape. [Open it in Colab](https://colab.research.google.com/github/cobusgreyling/nemotron-3.5-transcribe/blob/main/notebooks/nemotron_3_5_transcribe.ipynb). The weights stay out of the notebook.
+
 ## What the model is
 
 | | |
@@ -48,6 +52,7 @@ assets/header.jpg   banner
 assets/flow.svg     one request
 assets/throughput.svg
 assets/demo.wav     local three-voice clip
+notebooks/nemotron_3_5_transcribe.ipynb
 BLOG.md             the post
 ```
 
